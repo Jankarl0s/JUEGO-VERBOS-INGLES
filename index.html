@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <audio id="background-music" loop>
+        <source src="C:/Users/janca/OneDrive/Documentos/ICEP/PROYECTOS/TYPING/audio/musica.m4a" type="audio/mp4">
+    </audio>
+</head>
+<body>
+    <div class="container">
+        <img src="img/cell.gif" alt="GIF de fondo" class="background-banner">
+        <div id="verb-container">
+            <!-- Aquí se mostrarán los verbos -->
+        </div>
+        <div id="score">  Score: <span id="score-value">0</span></div>
+        <div class="answer-box">
+            <input type="text" id="translation" placeholder="Dime el verbo en inglès">
+        </div>
+        <div id="timer-container">
+            <div id="timer">00:00:00</div>
+            <div id="radar-background"></div>
+        </div>
+        <button id="start-button">   START   </button>
+        <audio id="explosion-sound">
+            <source src="audio/sonido.mp3" type="audio/mp3">
+        </audio>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

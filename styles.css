@@ -1,0 +1,170 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 90px; /* Cambia el tamaño de la letra a 16 píxeles */
+    font-weight: bold; /* Hace que el texto aparezca en negrita */
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    background-image: url("file:///C:/Users/janca/OneDrive/Documentos/ICEP/PROYECTOS/TYPING/img/fondo.jpg");
+    background-size: cover;
+}
+
+.container {
+    position: relative;
+    max-width: 1800px;
+    margin: auto;
+    text-align: center;
+    height: 100vh; /* Establecer altura al 100% de la ventana */
+}
+
+.background-banner {
+    width: 10%; /* Ajustar al ancho completo */
+    height: auto;
+    position: center;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#verb-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.verb {
+
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    animation: slideDown 5s ease-in-out forwards;
+    opacity: 0;
+    color: rgba(40, 8, 81, 0.911); /* Cambia el color de las letras a azul */
+    text-shadow: 0 0 10px white; /* Agrega un borde blanco alrededor de las letras */
+    
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#start-button {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    font-size: 40px;
+    background-color: #ff0000;
+    color: #ffffff;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    text-shadow: 0 0 5px rgb(253, 254, 254); /* Agrega un borde blanco alrededor de las letras */
+    border: 5px solid black; /* Borde negro alrededor del botón */
+
+}
+
+#score {
+    position: fixed;
+    bottom: 40px;
+    left: 20px;
+    color: #ffffff;
+    z-index: 1;
+}
+
+.icon {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.answer-box {
+    position: fixed;
+    bottom: 20px; /* Distancia desde la parte inferior */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px; /* Ancho de la caja */
+    background-image: url("file:///C:/Users/janca/OneDrive/Documentos/ICEP/PROYECTOS/TYPING/img/goku.gif");
+    background-position: center; /* Para centrar la imagen en el contenedor */
+    max-width: 400px; /* Establece un ancho máximo */
+    height: 160px;
+    padding: 80px; /* Ajusta el relleno */
+    border-radius: 10px; /* Añade esquinas redondeadas */
+    z-index: 1; /* Asegura que esté sobre otros elementos */
+    background-size: 100% 100%; /* Ajusta la imagen al tamaño completo de la caja sin distorsión */
+}
+
+
+#translation {
+    width: calc(100% - 40px); /* Ajusta el ancho del campo de texto */
+    padding: 20px; /* Ajusta el relleno */
+    font-size: 25px; /* Ajusta el tamaño de fuente */
+    border: 1px solid #ccc; /* Añade un borde */
+    border-radius: 5px; /* Añade esquinas redondeadas */
+    outline: none; /* Elimina el resplandor al enfocar */
+    margin-top: 40px; /* Ajusta la distancia desde la parte superior */
+}
+
+/* Agrega estilos para el contador de tiempo */
+#timer-container {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+}
+
+#timer-container {
+    position: fixed;
+    top: 20px; /* Ajusta la distancia desde la parte superior según sea necesario */
+    left: 20px; /* Ajusta la distancia desde la parte izquierda según sea necesario */
+    width: 200px; /* Ajusta el ancho según tu preferencia */
+    height: 200px; /* Ajusta la altura según tu preferencia */
+    z-index: 9999; /* Asegura que esté por encima de otros elementos */
+}
+
+#timer {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    right: 3%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: rgb(255, 6, 6);
+    font-weight: bold;
+    z-index: 1; /* Asegura que el contador esté por encima del fondo */
+}
+
+#radar-background {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 320px;
+    height: 320px;
+    background-image: url("file:///C:/Users/janca/OneDrive/Documentos/ICEP/PROYECTOS/TYPING/img/radar.png");
+    background-size: contain; /* Cambia a 'contain' para asegurar que la imagen se ajuste completamente */
+    background-repeat: no-repeat;
+    padding: 0;
+    z-index: 0; /* Asegura que el fondo esté detrás del contador */
+    animation: floating 10s infinite; /* Aplicar la animación 'floating' durante 5 segundos y repetirla infinitamente */
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(-30px); /* Mover hacia arriba */
+    }
+    50% {
+        transform: translateY(30px); /* Mover hacia abajo */
+    }
+    100% {
+        transform: translateY(-30px); /* Volver a la posición inicial */
+    }
+}
